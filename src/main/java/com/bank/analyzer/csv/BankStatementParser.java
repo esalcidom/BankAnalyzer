@@ -1,8 +1,8 @@
 package com.bank.analyzer.csv;
 
-import com.bank.analyzer.domain.BankTransaction;
-
 import java.util.List;
+
+import com.bank.analyzer.domain.BankTransaction;
 
 public interface BankStatementParser {
 

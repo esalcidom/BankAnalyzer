@@ -2,3 +2,6 @@
 /shelf/
 /workspace.xml
 .idea/**
+.vscode/**
+target/**
+.settings/**
