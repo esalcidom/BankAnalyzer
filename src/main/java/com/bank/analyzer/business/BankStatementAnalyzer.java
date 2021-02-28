@@ -45,18 +45,9 @@ public class BankStatementAnalyzer {
 
     }
 
-    public String export(Exporter exporter){
-        return exporter.export(collectSummary(bankStatementProcessor));
-    }
-
-    private SummaryStatistics collectSummary(final BankStatementProcessor bankStatementProcessor){
-        //TODO: Map statementProcessor to SummaryStatistics.
-        SummaryStatistics summaryStatistics = null;
-        log.trace("The total for all transactions is " + bankStatementProcessor.calculateTotalAmount());
-        log.trace("The total for transactions in January is " + bankStatementProcessor.calculateTotalInMonth(Month.JANUARY));
-        log.trace("The total for transactions in February is " + bankStatementProcessor.calculateTotalInMonth(Month.FEBRUARY));
-        log.trace("The total salary received is " + bankStatementProcessor.calculateTotalForCategory("Salary"));
-        return summaryStatistics;
+    public String export(final Exporter exporter){
+        //TODO: check if this is catually ok
+        return exporter.export(bankStatementProcessor.getSummary());
     }
 
 }
